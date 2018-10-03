@@ -29,7 +29,6 @@ function setCurrentSlide() {
 $('.slider__control').click(function () {
     currentImage = $(this).attr('data-img');
     setCurrentSlide();
-    console.log(currentImage);
 })
 $('.slider__right').click(function () {
     if (currentImage > 1) {
@@ -37,7 +36,6 @@ $('.slider__right').click(function () {
     } else {
         ++currentImage;
     }
-    console.log(currentImage);
     setCurrentSlide();
 })
 $('.slider__left').click(function () {
@@ -46,7 +44,6 @@ $('.slider__left').click(function () {
     } else {
         --currentImage;
     }
-    console.log(currentImage);
     setCurrentSlide();
 })
 setCurrentSlide()
