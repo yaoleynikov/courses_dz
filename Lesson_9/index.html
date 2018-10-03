@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>jQuery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            transition: all .4s;
+        }
+
+        .box2--accent {
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+        }
+
+        .slider {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .slider__container {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            position: relative;
+        }
+
+        .slider__controls {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .slider__control {
+            width: 20px;
+            height: 20px;
+            margin: 0 10px;
+            background-color: #000;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider__control--isActive {
+            background-color: red;
+        }
+
+        .accordion {
+            width: 50%;
+            margin: 50px auto;
+            font-family: sans-serif;
+        }
+
+        .accordion__panel {
+            margin-bottom: 30px;
+            box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .5);
+        }
+
+        .accordion__control,
+        .accordion__data {
+            padding: 10px;
+        }
+
+        .accordion__control {
+            font-size: 20px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #bbb;
+            cursor: pointer;
+        }
+
+        .accordion__data {
+            line-height: 1.5;
+            display: none;
+        }
+
+        .accordion__data--isVisible {
+            display: block;
+        }
+        .slider__left {
+            position: absolute;
+            height: 100%;
+            width: 15%;
+            left: 0;
+            background-image: url('./img/next.svg');
+            background-repeat: no-repeat;
+            background-position: 60px 160px;
+            background-size: 50%;
+            transform: rotate(180deg);
+        }
+        .slider__right {
+            position: absolute;
+            height: 100%;
+            width: 15%;
+            right: 0;
+            background-image: url('./img/next.svg');
+            background-repeat: no-repeat;
+            background-position: 60px 160px;
+            background-size: 50%;
+        }
+        .slider__right:hover, .slider__left:hover {
+            background-image: url('./img/next__hover.svg');
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- <button class="btn">Click</button>
+    <br><br>
+    <div class="box">
+        <div class="box2"></div>
+    </div>
+    <div class="box">
+        <div class="box2"></div>
+    </div> -->
+
+    <div class="slider">
+        <div class="slider__container">
+                <div class="slider__left"></div>
+                <div class="slider__right"></div>
+        </div>
+        <div class="slider__controls"></div>
+    </div>
+
+    <!-- <div class="accordion">
+        <div class="accordion__panel">
+            <div class="accordion__control">Some title</div>
+            <div class="accordion__data">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum accusamus officiis et, veritatis modi mollitia esse corrupti excepturi magnam debitis ab laboriosam maxime, non fugit minus delectus vel reprehenderit magni?
+            </div>
+        </div>
+        <div class="accordion__panel">
+            <div class="accordion__control">Some title</div>
+            <div class="accordion__data">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum accusamus officiis et, veritatis modi mollitia esse corrupti excepturi magnam debitis ab laboriosam maxime, non fugit minus delectus vel reprehenderit magni?
+            </div>
+        </div>
+        <div class="accordion__panel">
+            <div class="accordion__control">Some title</div>
+            <div class="accordion__data">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum accusamus officiis et, veritatis modi mollitia esse corrupti excepturi magnam debitis ab laboriosam maxime, non fugit minus delectus vel reprehenderit magni?
+            </div>
+        </div>
+        <div class="accordion__panel">
+            <div class="accordion__control">Some title</div>
+            <div class="accordion__data">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum accusamus officiis et, veritatis modi mollitia esse corrupti excepturi magnam debitis ab laboriosam maxime, non fugit minus delectus vel reprehenderit magni?
+            </div>
+        </div>
+    </div> -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
